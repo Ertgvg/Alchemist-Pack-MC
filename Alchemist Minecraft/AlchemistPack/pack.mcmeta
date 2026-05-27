@@ -1,0 +1,14 @@
+{
+  "pack": {
+    "pack_format": 96,
+    "min_format": [
+      95,
+      0
+    ],
+    "max_format": [
+      101,
+      1
+    ],
+    "description": "The Alchemist's Touch"
+  }
+}
