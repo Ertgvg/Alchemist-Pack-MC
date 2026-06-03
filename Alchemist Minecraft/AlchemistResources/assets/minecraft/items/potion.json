@@ -2,10 +2,15 @@
   "model": {
     "type": "minecraft:range_dispatch",
     "property": "minecraft:custom_model_data",
-    "index": 0,
     "fallback": {
       "type": "minecraft:model",
-      "model": "minecraft:item/potion"
+      "model": "minecraft:item/potion",
+      "tints": [
+        {
+          "type": "minecraft:potion",
+          "default": 3694022
+        }
+      ]
     },
     "entries": [
       {
