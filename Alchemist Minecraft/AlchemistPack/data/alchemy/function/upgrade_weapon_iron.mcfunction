@@ -39,6 +39,9 @@ execute if entity @s[nbt={Item:{id:"minecraft:iron_leggings"}}] run summon item 
 # 11. Manifest the boots
 execute if entity @s[nbt={Item:{id:"minecraft:iron_boots"}}] run summon item ~ ~0.5 ~ {Item:{id:"minecraft:iron_boots",count:1,components:{custom_name:[{"text":"Refined Iron Boots","italic":false,"color":"aqua"}],enchantment_glint_override:false,enchantments:{protection:3,unbreaking:2}}}}
 
+#12. Manifest the shield
+execute if entity @s[nbt={Item:{id:"minecraft:shield"}}] run summon item ~ ~0.5 ~ {Item:{id:"minecraft:shield",count:1,components:{custom_name:[{"text":"Refined Iron Shield","italic":false,"color":"aqua"}],enchantment_glint_override:false,enchantments:{unbreaking:5},"minecraft:custom_model_data":{floats:[1008.0f]}}}}
+
 # --------------------------------
 
 # 12. Audio/Visual feedback (High pitch for a sharp blade forge)

@@ -6,8 +6,7 @@ execute unless entity @e[type=item,nbt={Item:{id:"minecraft:netherite_ingot",com
 kill @e[type=item,nbt={Item:{id:"minecraft:netherite_ingot",components:{"minecraft:custom_model_data":{floats:[1005.0f]}}}},distance=..1.5,limit=1,sort=nearest]
 
 # 2. Manifest the SWORD (Only triggers if the original item was a sword)
-execute if entity @s[nbt={Item:{id:"minecraft:netherite_sword"}}] run summon item ~ ~0.5 ~ {Item:{id:"minecraft:netherite_sword",count:1,components:{"minecraft:custom_model_data":{floats:[9000.0f]},custom_name:[{"text":"Refined Netherite Axe","italic":false,"color":"dark_purple"}],enchantment_glint_override:false,enchantments:{sharpness:3,unbreaking:2}}}}
-
+execute if entity @s[nbt={Item:{id:"minecraft:netherite_sword"}}] run summon item ~ ~0.5 ~ {Item:{id:"minecraft:netherite_sword",count:1,components:{"minecraft:custom_model_data":{floats:[9000.0f]},custom_name:[{"text":"Refined Netherite Blade","italic":false,"color":"dark_purple"}],enchantment_glint_override:false,enchantments:{sharpness:3,unbreaking:2}}}}
 
 # 3. Manifest the AXE (Only triggers if the original item was an axe)
 execute if entity @s[nbt={Item:{id:"minecraft:netherite_axe"}}] run summon item ~ ~0.5 ~ {Item:{id:"minecraft:netherite_axe",count:1,components:{custom_name:[{"text":"Refined Netherite Axe","italic":false,"color":"dark_purple"}],enchantment_glint_override:false,enchantments:{sharpness:3,unbreaking:2}}}}

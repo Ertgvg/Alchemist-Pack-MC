@@ -7,7 +7,7 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:coal_block"},OnGround:1b}] at @
 execute as @e[type=item,nbt={Item:{id:"minecraft:raw_iron"},OnGround:1b}] at @s if entity @e[type=item,nbt={Item:{id:"minecraft:coal_block"}},distance=..2] run function alchemy:stage1_carbonize
 
 # 3. Stage 2 Quench
-execute as @e[type=item,nbt={OnGround:1b}] at @s if items entity @s contents *[custom_data~{alchemist_stage:"carbonized"}] if block ~ ~ ~ water run function alchemy:stage2_quench
+execute as @e[type=item,nbt={Item:{id:"minecraft:iron_ingot"},OnGround:1b}] at @s if items entity @s contents *[custom_data~{alchemist_stage:"carbonized"},custom_model_data={floats:[1001.0f]}] if block ~ ~ ~ water run function alchemy:stage2_quench
 
 # Recycle Slag: Slag + Glass Bottle -> Returns a small amount of Iron Nuggets
 execute as @e[type=item,nbt={Item:{id:"minecraft:brick",components:{"minecraft:item_name":{text:"Alchemical Slag",color:"gray"}}},OnGround:1b}] at @s if entity @e[type=item,nbt={Item:{id:"minecraft:glass_bottle"}},distance=..2] run function alchemy:recycle_slag
@@ -36,3 +36,6 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:netherite_ingot"},OnGround:1b}]
 execute as @e[type=item,nbt={Item:{id:"minecraft:iron_ingot",components:{"minecraft:custom_model_data":{floats:[1001.0f]}}},OnGround:1b}] at @s if entity @e[type=item,nbt={Item:{id:"minecraft:potion",components:{"minecraft:potion_contents":{potion:"minecraft:water"}}}},distance=..2] run function alchemy:purify_silver
 
 #=================================
+
+# ELIXIR OF LIFE STAGE: Dragon Egg + Dragon Head + Gold Ingot + Silver (1006) on the ground
+execute as @e[type=item] if data entity @s Item{id:"minecraft:dragon_egg"} at @s if entity @e[type=item,nbt={Item:{id:"minecraft:dragon_head"}},distance=..2] if entity @e[type=item,nbt={Item:{id:"minecraft:gold_ingot"}},distance=..2] if entity @e[type=item,nbt={Item:{id:"minecraft:diamond",components:{"minecraft:custom_model_data":{floats:[1006.0f]}}}},distance=..2] run function alchemy:craft_elixir_of_life

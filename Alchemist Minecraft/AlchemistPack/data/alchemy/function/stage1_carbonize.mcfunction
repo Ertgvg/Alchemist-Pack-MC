@@ -6,7 +6,7 @@ scoreboard players set #roll alchemy_temp 0
 execute if predicate alchemy:chance_70 run scoreboard players set #roll alchemy_temp 1
 
 # 3. SUCCESS: Only if score is 1
-execute if score #roll alchemy_temp matches 1 run summon item ~ ~ ~ {Item:{id:"minecraft:iron_ingot",count:1,components:{"minecraft:custom_data":{alchemist_stage:"carbonized"},"minecraft:item_name":{"text":"Carbonized Iron","italic":false, "color":"red"},"minecraft:custom_model_data":{floats:[1001f]}}}}
+execute if score #roll alchemy_temp matches 1 run summon item ~ ~ ~ {Item:{id:"minecraft:iron_ingot",count:1,components:{"minecraft:custom_data":{alchemist_stage:"carbonized"},"minecraft:item_name":{"text":"Carbonized Iron","italic":false, "color":"red"},"minecraft:custom_model_data":{floats:[1001.0f]}}}}
 execute if score #roll alchemy_temp matches 1 run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 1 0.8
 execute if score #roll alchemy_temp matches 1 run particle minecraft:large_smoke ~ ~ ~ 0.2 0.2 0.2 0.05 10
 

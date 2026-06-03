@@ -18,7 +18,7 @@ execute as @e[type=item,nbt={Item:{id:"minecraft:iron_chestplate"}},distance=..1
 execute as @e[type=item,nbt={Item:{id:"minecraft:iron_leggings"}},distance=..1.5,limit=1,sort=nearest] at @s run function alchemy:upgrade_weapon_iron
 execute as @e[type=item,nbt={Item:{id:"minecraft:iron_boots"}},distance=..1.5,limit=1,sort=nearest] at @s run function alchemy:upgrade_weapon_iron
 
-
+execute as @e[type=item,nbt={Item:{id:"minecraft:shield"}},distance=..1.5,limit=1,sort=nearest] at @s run function alchemy:upgrade_weapon_iron
 
 
 # ===========================================================
